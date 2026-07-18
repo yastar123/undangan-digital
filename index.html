@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Undangan Digital - Ari & Miekekal</title>
+    <!-- Pemanggilan File CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- AUDIO BACKGROUND -->
+    <audio id="bg-wedding-music" loop>
+      <source src="ok ok.mp3" type="audio/mpeg" />
+    </audio>
+
+    <!-- TOMBOL KONTROL MUSIK -->
+    <button class="music-control-btn" id="musicBtn" onclick="toggleMusic()">
+      <svg id="icon-play" viewBox="0 0 16 16">
+        <path
+          d="M11.536 14.01A8.473 8.473 0 0 0 14 10.248a8.473 8.473 0 0 0-2.464-3.762l-.708.708A7.476 7.476 0 0 1 13 10.248a7.476 7.476 0 0 1-2.172 3.054l.708.708zm-2.122-2.122A5.474 5.474 0 0 0 11 10.248c0-1.278-.435-2.456-1.164-3.396l-.708.708A4.474 4.474 0 0 1 10 10.248a4.474 4.474 0 0 1-.586 2.228l.708.708zM10 3.11 5.447 7H2a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h3.447L10 16.89V3.11z"
+        />
+      </svg>
+      <svg id="icon-mute" viewBox="0 0 16 16" style="display: none">
+        <path
+          d="M6.717 3.55A.5.5 0 0 1 7 4v8a.5.5 0 0 1-.812.39L3.825 10.5H1.5A.5.5 0 0 1 1 10V6a.5.5 0 0 1 .5-.5h2.325l2.363-1.89a.5.5 0 0 1 .529-.06zm7.137 2.096a.5.5 0 0 1 0 .708L12.207 8l1.647 1.646a.5.5 0 0 1-.708.708L11.5 8.707l-1.646 1.647a.5.5 0 0 1-.708-.708L10.793 8 9.146 6.354a.5.5 0 1 1 .708-.708L11.5 7.293l1.646-1.647a.5.5 0 0 1 .708 0z"
+        />
+      </svg>
+    </button>
+
+    <!-- MANDATORY FRAME ORNAMEN -->
+    <div class="frame-ornament">
+      <div class="flower-top"></div>
+      <div class="gunungan-left"></div>
+      <div class="gunungan-right"></div>
+      <div class="flower-bottom"></div>
+    </div>
+
+    <div class="header-logo">
+      <span>WhyYan</span>
+    </div>
+
+    <!-- HALAMAN 1: COVER -->
+    <div id="cover">
+      <div class="cover-card">
+        <p class="undangan-title">Undangan Digital</p>
+        <p class="special-title">SPESIAL</p>
+        <div class="cover-photo-frame">
+          <img src="img/img_1" alt="Foto Pasangan" />
+        </div>
+        <h2 class="couple-name-big">Ari & Miekekal</h2>
+        <p class="to-guest">Kepada Bapak/Ibu/Saudara/i</p>
+        <p class="guest-name" id="guest-name-placeholder">For You</p>
+
+        <button class="btn-open" onclick="openInvitation()">
+          <svg width="16" height="16" fill="white" viewBox="0 0 16 16">
+            <path
+              d="M.5 3.5A.5.5 0 0 1 1 4v3.248l6.273-3.137a.5.5 0 0 1 .454 0L14 7.248V4a.5.5 0 0 1 1 0v8a.5.5 0 0 1-1 0V8.752l-6.273 3.137a.5.5 0 0 1-.454 0L1 8.752V12a.5.5 0 0 1-1 0v-8Z"
+            />
+          </svg>
+          Buka Undangan
+        </button>
+      </div>
+    </div>
+
+    <!-- MAIN CONTAINER -->
+    <div class="main-container" id="main-content">
+      <!-- PAGE 2: HERO UTAMA -->
+      <div class="section-page">
+        <p class="undangan-title hidden">Undangan Digital</p>
+        <p class="special-title hidden">SPESIAL FOR YOU</p>
+        <div class="hero-image hidden">
+          <img src="img/img_2" alt="Foto Pasangan Utama" />
+        </div>
+        <h1 class="couple-name hidden">Ari & Miekekal</h1>
+        <p class="date-main hidden">Senin, 10 Agustus 2026</p>
+        <div class="bottom-card hidden">Bride & Groom</div>
+      </div>
+
+      <!-- PAGE 2.5: REFERENSI AYAT SUCI -->
+      <div class="section-page">
+        <div class="verse-box hidden">
+          <p
+            class="text-content"
+            style="font-style: italic; font-size: 13px; text-align: center"
+          >
+            "Nikahkanlah orang-orang yang masih membujang di antara kamu dan
+            juga orang-orang yang layak (menikah) dari hamba-hamba sahayamu,
+            baik laki-laki maupun perempuan. Jika mereka miskin, Allah akan
+            memberi kemampuan kepada mereka dengan karunia-Nya. Allah Maha Luas
+            (pemberian-Nya) lagi Maha Mengetahui."
+          </p>
+          <p
+            style="
+              font-weight: bold;
+              font-size: 12px;
+              margin-top: 10px;
+              text-align: center;
+              color: var(--accent-color);
+            "
+          >
+            QS. An Nur:32
+          </p>
+        </div>
+      </div>
+
+      <!-- PAGE 3: DATA DIRI MEMPELAI -->
+      <div class="section-page">
+        <h2 class="section-title hidden">Assalamu'alaikum Wr. Wb.</h2>
+        <p class="text-content hidden">
+          Tanpa mengurangi rasa hormat, kami mengundang Bapak/Ibu/Saudara/i
+          untuk menghadiri acara pernikahan kami:
+        </p>
+
+        <div class="mempelai-photo hidden">
+          <img src="img/img_3" alt="Mempelai Wanita" />
+        </div>
+        <h3 class="sub-section-title hidden">Miekekal Debora Samuel</h3>
+        <p class="text-content hidden">
+          Putri dari Bpk.Dhar Syamsi Thas Samuel (alm) & Ibu Ngatiyem (alm)
+        </p>
+
+        <h2 class="section-title hidden" style="margin: 10px 0">&</h2>
+
+        <div class="mempelai-photo hidden">
+          <img src="img/img_4" alt="Mempelai Pria" />
+        </div>
+        <h3 class="sub-section-title hidden">Ari Suratno</h3>
+        <p class="text-content hidden">
+          Putra dari Bpk. Kasnen & Ibu Titin Supriyatin
+        </p>
+      </div>
+
+      <!-- PAGE 4: DETAIL WAKTU, LOKASI & COUNTDOWN -->
+      <div class="section-page">
+        <h2 class="section-title hidden">Waktu & Tempat</h2>
+        <p class="text-content hidden">
+          Insya Allah acara akan diselenggarakan pada:
+        </p>
+        <p class="date-main hidden" style="font-size: 18px; margin-bottom: 5px">
+          Senin, 10 Agustus 2026
+        </p>
+        <p class="text-content hidden" style="font-weight: bold">
+          Pukul 10.00 WIB - SELESAI
+        </p>
+
+        <!-- FITUR HITUNG MUNDUR (COUNTDOWN) -->
+        <div class="countdown-container hidden">
+          <div class="countdown-box">
+            <span class="countdown-number" id="days">00</span>
+            <span class="countdown-label">Hari</span>
+          </div>
+          <div class="countdown-box">
+            <span class="countdown-number" id="hours">00</span>
+            <span class="countdown-label">Jam</span>
+          </div>
+          <div class="countdown-box">
+            <span class="countdown-number" id="minutes">00</span>
+            <span class="countdown-label">Menit</span>
+          </div>
+          <div class="countdown-box">
+            <span class="countdown-number" id="seconds">00</span>
+            <span class="countdown-label">Detik</span>
+          </div>
+        </div>
+
+        <div class="acara-card hidden">
+          <h3>Lokasi Utama</h3>
+          <div class="acara-details">
+            <p>
+              <strong>Jl. Dusun Astana, RT. 005 RW. 005</strong><br />
+              Desa Cirebon Girang, Blok Tanjung, Kecamatan Talun, Kabupaten
+              Cirebon
+            </p>
+          </div>
+          <a
+            href="https://maps.app.goo.gl/keAe4zhJV3uhGEjh9"
+            target="_blank"
+            class="btn-action"
+            >Lihat Peta Lokasi</a
+          >
+        </div>
+
+        <!-- FITUR LIVE STREAMING -->
+        <div class="acara-card hidden" style="margin-top: 15px">
+          <h3>Live Streaming</h3>
+          <p
+            class="text-content"
+            style="color: white; font-size: 12px; margin-bottom: 10px"
+          >
+            Kami mengundang Bapak/Ibu/Saudara/i untuk menyaksikan pernikahan
+            kami secara virtual melalui media sosial di bawah ini:
+          </p>
+          <a href="#" target="_blank" class="btn-action">📸 Instagram Live</a>
+        </div>
+      </div>
+
+      <!-- PAGE 4.5: LOVE STORY -->
+      <div class="section-page">
+        <h2
+          class="section-title hidden"
+          style="font-style: italic; font-family: var(--font-serif)"
+        >
+          Love Story
+        </h2>
+        <div
+          class="hero-image hidden"
+          style="border: 4px solid white; border-radius: 12px"
+        >
+          <img src="img/img_5" alt="Foto Cerita Cinta" />
+        </div>
+        <p
+          class="text-content hidden"
+          style="font-size: 13px; text-align: justify"
+        >
+          Pertemuan yang tidak disengaja menumbuhkan benih ikatan yang suci.
+          Berbekal restu dari kedua keluarga besar, kami memutuskan melangkah ke
+          jenjang pelaminan untuk merajut cita - cita dan cinta selamanya.
+        </p>
+      </div>
+
+      <!-- PAGE 5: GALERI -->
+      <div class="section-page">
+        <div class="gallery-box hidden">
+          <h2>Our Gallery</h2>
+          <div class="gallery-grid">
+            <div class="gallery-item">
+              <img src="img/img_7" alt="Foto Galeri 1" />
+            </div>
+            <div class="gallery-item">
+              <img src="img/img_6" alt="Foto Galeri 2" />
+            </div>
+            <div class="gallery-item">
+              <img src="img/img_1" alt="Foto Galeri 3" />
+            </div>
+            <div class="gallery-item">
+              <img src="img/img_2" alt="Foto Galeri 4" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PAGE 6: DANA TERPISAH -->
+      <div class="section-page">
+        <h2 class="section-title hidden">Digital Gift</h2>
+        <p class="text-content hidden">
+          Tanda kasih dapat disampaikan secara cashless melalui opsi di bawah
+          ini:
+        </p>
+
+        <div class="acara-card hidden">
+          <h3>Bank Transfer</h3>
+          <div class="acara-details">
+            <p style="font-size: 16px; font-weight: bold; color: #d2b48c">
+              BANK BCA
+            </p>
+            <p style="font-size: 18px; font-weight: bold; margin: 5px 0">
+              7641888307
+            </p>
+            <p>a/n Miekekal Debora Samuel</p>
+          </div>
+          <button class="btn-action btn-copy" onclick="copyText('7641888307')">
+            Salin Rekening
+          </button>
+        </div>
+
+        <div class="acara-card hidden">
+          <h3>E-Wallet Miekekal</h3>
+          <div class="acara-details">
+            <p style="font-size: 18px; font-weight: bold; margin: 5px 0">
+              083136491471
+            </p>
+            <p>Nama Akun: miekekel</p>
+          </div>
+          <button
+            class="btn-action btn-copy"
+            onclick="copyText('083136491471')"
+          >
+            Salin Nomor
+          </button>
+        </div>
+
+        <div class="acara-card hidden">
+          <h3>E-Wallet Ari</h3>
+          <div class="acara-details">
+            <p style="font-size: 18px; font-weight: bold; margin: 5px 0">
+              082129378549
+            </p>
+            <p>Nama Akun: ari suratno</p>
+          </div>
+          <button
+            class="btn-action btn-copy"
+            onclick="copyText('082129378549')"
+          >
+            Salin Nomor
+          </button>
+        </div>
+      </div>
+
+      <!-- PAGE 7: UCAPAN TAMU -->
+      <div class="section-page">
+        <div class="rsvp-box hidden">
+          <h2 style="font-family: var(--font-serif); margin-bottom: 5px">
+            Ucapkan Sesuatu
+          </h2>
+          <p style="font-size: 12px; opacity: 0.8">
+            Berikan Ucapan & Doa Restu
+          </p>
+
+          <div class="rsvp-counter">
+            <div class="count-badge badge-hadir">
+              <span id="count-h">1</span><br />Hadir
+            </div>
+            <div class="count-badge badge-absen">
+              <span id="count-th">0</span><br />Tidak Hadir
+            </div>
+          </div>
+
+          <form
+            class="rsvp-form"
+            id="form-ucapan"
+            onsubmit="submitUcapan(event)"
+          >
+            <input
+              type="text"
+              id="form-nama"
+              placeholder="Nama Anda"
+              required
+            />
+            <textarea
+              id="form-pesan"
+              placeholder="Tulis ucapan selamat & doa restu Anda di sini..."
+              required
+            ></textarea>
+            <select id="form-konfirmasi" required>
+              <option value="" disabled selected>Konfirmasi Kehadiran</option>
+              <option value="Hadir">Hadir</option>
+              <option value="Tidak Hadir">Tidak Hadir</option>
+            </select>
+            <button type="submit" class="btn-submit">Kirim Ucapan</button>
+          </form>
+
+          <div class="comment-section" id="box-komentar">
+            <div class="comment-item">
+              <span class="comment-name">Ayu ✓</span>
+              <p>
+                Happy Wedding Miekekal & Ari ✨ Semoga dilancarkan sampai hari
+                H!
+              </p>
+              <span class="comment-time">Baru saja</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- OUTRO -->
+      <div class="section-page" style="margin-top: 50px">
+        <p class="text-content hidden" style="font-style: italic">
+          Merupakan suatu kebahagiaan bagi kami apabila Bapak/Ibu berkenan
+          hadir.
+        </p>
+        <p class="text-content hidden">Terima Kasih</p>
+        <h1 class="couple-name hidden" style="font-size: 26px">
+          Ari & Miekekal
+        </h1>
+      </div>
+    </div>
+
+    <!-- Pemanggilan File JavaScript -->
+    <script src="script.js"></script>
+  </body>
+</html>
